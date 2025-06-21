@@ -16,7 +16,7 @@ interface Product {
 }
 
 
-export default async function Home() {
+export default async function Products() {
   const filePath = path.join(process.cwd(), 'src', 'data', 'products.json');
   const file = await fs.readFile(filePath, 'utf-8');
   const products: Product[] = JSON.parse(file);
